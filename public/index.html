@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -24,12 +22,45 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
+  <title>React App</title>
+  <script type="x-shader/x-fragment" id="fragmentshader">
+    //gl_FragCoord:片元坐标，单位像素
+uniform vec3 color;
+
+void main() {
+
+ if ( length( gl_PointCoord - vec2( 0.5, 0.5 ) ) > 0.475 ) discard;//不满足条件舍弃片元
+
+ gl_FragColor = vec4( color, 1.0 );
+
+}
+
+</script>
+
+  <script type="x-shader/x-vertex" id="vertexshader">
+  //使用ShaderMaterial类，顶点位置变量position无需声明，顶点着色器可以直接调用
+  //modelViewMatrix:模型视图矩阵,内置变量
+  //projectionMatrix:投影矩阵属性,内置变量
+attribute float scale;
+
+void main() {
+
+vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+
+gl_PointSize = scale * ( 300.0 / - mvPosition.z );
+
+gl_Position = projectionMatrix * mvPosition;//第一行和本行代码的目的是坐标系转换。<投影矩阵>*<视图矩阵>*<模型矩阵>*<顶点坐标> 相乘的顺序不能改变
+
+}
+
+</script>
+
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -39,5 +70,6 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  </body>
+</body>
+
 </html>

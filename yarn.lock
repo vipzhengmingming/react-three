@@ -1953,6 +1953,11 @@
   dependencies:
     "@types/jest" "*"
 
+"@types/three@^0.134.0":
+  version "0.134.0"
+  resolved "https://registry.npmjs.org/@types/three/-/three-0.134.0.tgz#22ae9892f4490faaf35f0ccea127df18407b8ab3"
+  integrity sha512-4YB+99Rgqq27EjiYTItEoZtdjLnTh8W9LxowgpC9eWsjaQJIL4Kn/ZcUKAnW3gB/jS4hqGN8iqmid+RcUZDzpA==
+
 "@types/uglify-js@*":
   version "3.13.1"
   resolved "https://registry.npmjs.org/@types/uglify-js/-/uglify-js-3.13.1.tgz#5e889e9e81e94245c75b6450600e1c5ea2878aea"
@@ -5332,6 +5337,14 @@ get-value@^2.0.3, get-value@^2.0.6:
   version "2.0.6"
   resolved "https://registry.npmjs.org/get-value/-/get-value-2.0.6.tgz#dc15ca1c672387ca76bd37ac0a395ba2042a2c28"
   integrity sha1-3BXKHGcjh8p2vTesCjlbogQqLCg=
+
+giojs@^2.2.2:
+  version "2.2.2"
+  resolved "https://registry.npmjs.org/giojs/-/giojs-2.2.2.tgz#edbe953ea16969a8b09df778acc7cd013e970b29"
+  integrity sha512-4YTo4OnAfHhH3xpA5MvUF5i1v00t6K/BNjwy2g0HwAsVVtEw9EV2QxIyM0WA3rJKd/LP/rI3UZFE+EpqO3PNOQ==
+  dependencies:
+    stats.js "^0.17.0"
+    three "^0.102.1"
 
 glob-parent@^3.1.0:
   version "3.1.0"
@@ -10178,6 +10191,11 @@ static-extend@^0.1.1:
     define-property "^0.2.5"
     object-copy "^0.1.0"
 
+stats.js@^0.17.0:
+  version "0.17.0"
+  resolved "https://registry.npmjs.org/stats.js/-/stats.js-0.17.0.tgz#b1c3dc46d94498b578b7fd3985b81ace7131cc7d"
+  integrity sha1-scPcRtlEmLV4t/05hbgaznExzH0=
+
 "statuses@>= 1.4.0 < 2", "statuses@>= 1.5.0 < 2", statuses@~1.5.0:
   version "1.5.0"
   resolved "https://registry.npmjs.org/statuses/-/statuses-1.5.0.tgz#161c7dac177659fd9811f43771fa99381478628c"
@@ -10565,6 +10583,21 @@ text-table@0.2.0, text-table@^0.2.0:
   version "0.2.0"
   resolved "https://registry.npmjs.org/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
+
+three-orbitcontrols@^2.110.3:
+  version "2.110.3"
+  resolved "https://registry.npmjs.org/three-orbitcontrols/-/three-orbitcontrols-2.110.3.tgz#ca9c91d5ec2f4731a1140acf2ff0281e15988edf"
+  integrity sha512-BNNbksJwbN3/MmT0X/gjz5ZCchm7bjk26SUdtJYRxfEYjDfkb/0PeUTHE/KuyJ5vb/owK3mojyy3vcqDx99sRA==
+
+three@^0.102.1:
+  version "0.102.1"
+  resolved "https://registry.npmjs.org/three/-/three-0.102.1.tgz#fc08b6b11860cf59e8cd45b7e90e34d1d1a8cbd6"
+  integrity sha512-btHBdww/Es4vdBkB2GjTE9mpj0vy8tgtxkX7ne7uxySXV8zoGxWJv1N88BydxnCqvAfmD4ZUTqPeESO7oDgeOQ==
+
+three@^0.134.0:
+  version "0.134.0"
+  resolved "https://registry.npmjs.org/three/-/three-0.134.0.tgz#d7ad4d85d050da0861bf39749b06ddfb5f17157f"
+  integrity sha512-LbBerg7GaSPjYtTOnu41AMp7tV6efUNR3p4Wk5NzkSsNTBuA5mDGOfwwZL1jhhVMLx9V20HolIUo0+U3AXehbg==
 
 throat@^5.0.0:
   version "5.0.0"
