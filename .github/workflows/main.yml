@@ -31,3 +31,8 @@ jobs:
 
       - name: Run a build script
         run:  npm run build
+
+      - name: Deploy
+        with:
+          publish_dir: ./docs/build # 部署打包后的 dist 目录
+          commit_message: Update Github gh-pages # 部署时的 git 提交信息，根据自身需要填写即
