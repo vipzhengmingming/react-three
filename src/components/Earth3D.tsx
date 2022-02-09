@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import Gis from "./gis";
-import { data } from "./data";
-import ThreeGis from "./three-gis";
+// import Gis from "./gis";
+// import { data } from "./data";
+// import ThreeGis from "./three-gis";
 import Points from "./Points";
-import WebVR from "./WebVR";
+// import WebVR from "./WebVR";
 type Earth3DProps = {};
 const Earth3D: React.FC<Earth3DProps> = () => {
   useEffect(() => {
