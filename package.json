@@ -37,6 +37,7 @@
       "no-unused-vars": 0
     }
   },
+  "homepage": "https://vipzhengmingming.github.io/react-three/",
   "browserslist": {
     "production": [
       ">0.2%",
