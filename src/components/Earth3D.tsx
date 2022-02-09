@@ -3,6 +3,7 @@ import Gis from "./gis";
 import { data } from "./data";
 import ThreeGis from "./three-gis";
 import Points from "./Points";
+import WebVR from "./WebVR";
 type Earth3DProps = {};
 const Earth3D: React.FC<Earth3DProps> = () => {
   useEffect(() => {
@@ -10,6 +11,7 @@ const Earth3D: React.FC<Earth3DProps> = () => {
     // gis.addData(data);
     // new ThreeGis("globeArea");
     new Points("globeArea");
+    // new WebVR("globeArea");
   }, []);
   return <div id="globeArea" style={{ width: "500px", height: "500px" }}></div>;
 };
